@@ -341,12 +341,12 @@ function renderCollector(p) {
 
 // ════════ VAULT ════════
 const VAULT_SEED = [
-  {name:'Brian Treptow',wk:[{balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0},null,null,null],mtd:{offages:0,amount:null,balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0}},
-  {name:'Ana Martinez',wk:[{balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0},null,null,null],mtd:{offages:0,amount:null,balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0}},
-  {name:'Chris Pope',wk:[{balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0},null,null,null],mtd:{offages:0,amount:null,balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0}},
-  {name:'Rory O\'Neill',wk:[{balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0},null,null,null],mtd:{offages:0,amount:null,balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0}},
-  {name:'Randy Morlan',wk:[{balanced:1,outstanding:1,controllable:1,ledger:0,vbs:0,phys:0},null,null,null],mtd:{offages:1,amount:3043,balanced:1,outstanding:1,controllable:1,ledger:0,vbs:0,phys:0}},
-  {name:'Joel Argueta',wk:[null,null,null,null],mtd:{offages:1,amount:134,balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0}}
+  {name:'Brian Treptow',  wk:[{balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0},{balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0},null,null], mtd:{offages:1,amount:-17.91,balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0}},
+  {name:'Ana Martinez',   wk:[{balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0},{balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0},null,null], mtd:{offages:0,amount:0,balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0}},
+  {name:'Chris Pope',     wk:[{balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0},{balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0},null,null], mtd:{offages:0,amount:0,balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0}},
+  {name:"Rory O'Neill",   wk:[{balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0},null,null,null],                                                            mtd:{offages:0,amount:0,balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0}},
+  {name:'Randy Morlan',   wk:[{balanced:1,outstanding:1,controllable:1,ledger:0,vbs:0,phys:0},{balanced:1,outstanding:1,controllable:0,ledger:0,vbs:0,phys:0},null,null], mtd:{offages:2,amount:-8467,balanced:1,outstanding:2,controllable:2,ledger:0,vbs:0,phys:0}},
+  {name:'Joel Argueta',   wk:[null,null,null,null],                                                                                                                        mtd:{offages:1,amount:-134,balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0}}
 ];
 
 function balancedCell(v) {
@@ -361,6 +361,7 @@ function renderVault(p) {
   const el=document.getElementById('vault-body');
   if(p===4) { noData(el); return; }
   const isMTD=p===5;
+  if(!isMTD && !VAULT_SEED.map(s=>s.wk[p]).some(d=>d!==null)) { noData(el); return; }
   if(isMTD) {
     const rows=VAULT_SEED.map(s=>{
       const d=s.mtd;
@@ -395,11 +396,12 @@ function renderVault(p) {
         <td class="${d.phys>0?'err-cell':'num-cell zero'}">${n(d.phys)}</td>
         <td class="calc-cell">${r.err>0?r.err:'—'}</td></tr>`;
     });
-    const tot=rows.reduce((a,r)=>{return{offages:a.offages+r.d.offages,outstanding:a.outstanding+r.d.outstanding,controllable:a.controllable+r.d.controllable,ledger:a.ledger+r.d.ledger,vbs:a.vbs+r.d.vbs,phys:a.phys+r.d.phys}},{offages:0,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0});
+    const tot=rows.reduce((a,r)=>{return{offages:a.offages+r.d.offages,amount:a.amount+(r.d.amount||0),outstanding:a.outstanding+r.d.outstanding,controllable:a.controllable+r.d.controllable,ledger:a.ledger+r.d.ledger,vbs:a.vbs+r.d.vbs,phys:a.phys+r.d.phys}},{offages:0,amount:0,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0});
     const totErr=rows.reduce((a,r)=>a+r.err,0);
+    const totAmt=tot.amount!==0?'$'+tot.amount.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2}):'—';
     html+=`</tbody><tfoot><tr>
       <td class="name-cell">Team Total</td>
-      <td>${n(tot.offages)}</td><td>—</td><td>—</td>
+      <td>${n(tot.offages)}</td><td>${totAmt}</td><td>—</td>
       <td class="warn-cell">${n(tot.outstanding)}</td>
       <td class="err-cell">${n(tot.controllable)}</td>
       <td class="err-cell">${n(tot.ledger)}</td>
