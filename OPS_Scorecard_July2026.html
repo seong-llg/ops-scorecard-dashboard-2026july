@@ -260,50 +260,50 @@ function selectPeriod(sc,p,btn) {
 
 // ════════ COLLECTOR ════════
 const COLL_SEED = [
-  {name:'Alex Martinez',      rt:[1,0,0,0,0],   vgt:[0,0,0,0,0],     rterr:[0,0,0,0,0], ledger:[0,1,0,0,0], vault:[0,0,0,0,0], mtd:{rt:1,vgt:0,rterr:0,ledger:1,vault:0}},
-  {name:'Andres Duenas',      rt:[2,0,0,0,0],   vgt:[0,0,0,0,0],     rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:2,vgt:0,rterr:0,ledger:0,vault:0}},
-  {name:'Andrew Hidenburg',   rt:[0,0,0,0,0],   vgt:[0,0,0,0,0],     rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:0,vgt:0,rterr:0,ledger:0,vault:0}},
-  {name:'Andrew Rominger',    rt:[0,0,0,0,0],   vgt:[0,0,0,0,0],     rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:0,vgt:0,rterr:0,ledger:0,vault:0}},
-  {name:'Brandon York',       rt:[2,0,0,0,0],   vgt:[0,0,0,0,0],     rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:1,vgt:0,rterr:0,ledger:0,vault:0}},
-  {name:'Brent Hendricks',    rt:[0,0,0,0,0],   vgt:[271,287,0,0,0],   rterr:[0,0,0,0,0], ledger:[3,1,0,0,0], vault:[0,0,0,0,0], mtd:{rt:0,vgt:494,rterr:0,ledger:4,vault:0}},
-  {name:'Cesar Resendiz',     rt:[13,6,0,0,0],  vgt:[22,0,0,0,0],    rterr:[0,0,0,0,0], ledger:[2,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:19,vgt:22,rterr:0,ledger:2,vault:0}},
-  {name:'Craig Mueller',      rt:[3,0,0,0,0],   vgt:[17,6,0,0,0],    rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:3,vgt:23,rterr:0,ledger:0,vault:0}},
-  {name:'Damon Dziekan',      rt:[0,0,0,0,0],   vgt:[0,0,0,0,0],     rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:0,vgt:0,rterr:0,ledger:0,vault:0}},
-  {name:'Daniel Falkenberg',  rt:[0,38,0,0,0],   vgt:[0,0,0,0,0],     rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[1,0,0,0,0], mtd:{rt:38,vgt:0,rterr:0,ledger:0,vault:0}},
-  {name:'Daron Murphy',       rt:[37,22,0,0,0],  vgt:[227,138,0,0,0],   rterr:[0,0,0,0,0], ledger:[1,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:46,vgt:365,rterr:0,ledger:1,vault:0}},
-  {name:'Dennis Murray',      rt:[4,1,0,0,0],   vgt:[4,0,0,0,0],     rterr:[0,0,0,0,0], ledger:[0,1,0,0,0], vault:[0,0,0,0,0], mtd:{rt:5,vgt:4,rterr:0,ledger:1,vault:0}},
-  {name:'Earl Baker',         rt:[0,0,0,0,0],   vgt:[0,0,0,0,0],     rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:0,vgt:0,rterr:0,ledger:0,vault:0}},
-  {name:'Ernest Stone',       rt:[37,16,0,0,0],  vgt:[218,92,0,0,0],   rterr:[0,0,0,0,0], ledger:[1,1,0,0,0], vault:[0,0,0,0,0], mtd:{rt:45,vgt:264,rterr:0,ledger:2,vault:0}},
-  {name:'Gerardo Calenda',    rt:[10,6,0,0,0],  vgt:[0,0,0,0,0],     rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:15,vgt:0,rterr:0,ledger:0,vault:0}},
-  {name:'Ian Sullivan',       rt:[0,8,0,0,0],   vgt:[0,65,0,0,0],     rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:8,vgt:65,rterr:0,ledger:0,vault:0}},
-  {name:'Jacob Irizarry',     rt:[39,17,0,0,0],  vgt:[186,173,0,0,0],   rterr:[0,0,0,0,0], ledger:[1,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:54,vgt:348,rterr:0,ledger:1,vault:0}},
-  {name:'Jakub Kmiecik',      rt:[17,19,0,0,0],  vgt:[24,76,0,0,0],    rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:32,vgt:76,rterr:0,ledger:0,vault:0}},
-  {name:'Jason Lane',         rt:[18,21,0,0,0],  vgt:[69,112,0,0,0],    rterr:[0,0,0,0,0], ledger:[0,1,0,0,0], vault:[0,0,0,0,0], mtd:{rt:31,vgt:139,rterr:0,ledger:1,vault:0}},
-  {name:'Jim Emberton',       rt:[1,0,0,0,0],   vgt:[0,0,0,0,0],     rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:1,vgt:0,rterr:0,ledger:0,vault:0}},
-  {name:'Jimmy Girardi',      rt:[0,0,0,0,0],   vgt:[1,8,0,0,0],     rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:0,vgt:8,rterr:0,ledger:0,vault:0}},
-  {name:'Joel Argueta',       rt:[3,3,0,0,0],   vgt:[27,10,0,0,0],    rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:3,vgt:17,rterr:0,ledger:0,vault:0}},
-  {name:'John Broderick',     rt:[0,0,0,0,0],   vgt:[81,7,0,0,0],    rterr:[0,0,0,0,0], ledger:[1,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:0,vgt:86,rterr:0,ledger:1,vault:0}},
-  {name:'John Dubick',        rt:[2,1,0,0,0],   vgt:[0,0,0,0,0],     rterr:[0,0,0,0,0], ledger:[1,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:1,vgt:0,rterr:0,ledger:0,vault:0}},
-  {name:'Jonathan Cruz',      rt:[7,11,0,0,0],   vgt:[0,0,0,0,0],     rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:17,vgt:0,rterr:0,ledger:0,vault:0}},
-  {name:'Joshua Burton',      rt:[7,3,0,0,0],   vgt:[4,13,0,0,0],     rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:9,vgt:17,rterr:0,ledger:0,vault:0}},
-  {name:'Juan Payan',         rt:[14,0,0,0,0],  vgt:[0,0,0,0,0],     rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:0,vgt:0,rterr:0,ledger:0,vault:0}},
-  {name:'Kurt Grunden',       rt:[6,6,0,0,0],   vgt:[18,25,0,0,0],    rterr:[1,0,0,0,0], ledger:[0,1,0,0,0], vault:[0,0,0,0,0], mtd:{rt:12,vgt:43,rterr:1,ledger:1,vault:0}},
-  {name:'Liam Mulchrone',     rt:[29,14,0,0,0],  vgt:[153,231,0,0,0],   rterr:[1,0,0,0,0], ledger:[1,3,0,0,0], vault:[0,0,0,0,0], mtd:{rt:43,vgt:231,rterr:1,ledger:4,vault:0}},
-  {name:'Luke Hughes',        rt:[0,0,0,0,0],   vgt:[0,0,0,0,0],     rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:0,vgt:0,rterr:0,ledger:0,vault:0}},
-  {name:'Manuel Vargas',      rt:[38,49,0,0,0],  vgt:[87,78,0,0,0],    rterr:[0,0,0,0,0], ledger:[1,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:76,vgt:89,rterr:0,ledger:0,vault:0}},
-  {name:'Mark Minnis',        rt:[8,4,0,0,0],   vgt:[35,5,0,0,0],    rterr:[0,0,0,0,0], ledger:[0,1,0,0,0], vault:[0,0,0,0,0], mtd:{rt:12,vgt:39,rterr:0,ledger:1,vault:0}},
-  {name:'Mathew Moreland',    rt:[0,1,0,0,0],   vgt:[3,7,0,0,0],     rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:1,vgt:10,rterr:0,ledger:0,vault:0}},
-  {name:'Michael Binstein',   rt:[12,3,0,0,0],  vgt:[0,0,0,0,0],     rterr:[0,0,0,0,0], ledger:[1,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:15,vgt:0,rterr:0,ledger:1,vault:0}},
-  {name:'Nathaniel Knudtson', rt:[0,0,0,0,0],   vgt:[0,2,0,0,0],     rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:0,vgt:2,rterr:0,ledger:0,vault:0}},
-  {name:'Naveen Bobba',       rt:[8,12,0,0,0],   vgt:[0,0,0,0,0],     rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:16,vgt:0,rterr:0,ledger:0,vault:0}},
-  {name:'Randy Morlan',       rt:[0,0,0,0,0],   vgt:[0,0,0,0,0],     rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:0,vgt:0,rterr:0,ledger:0,vault:0}},
-  {name:'Richard Berrios',    rt:[2,0,0,0,0],   vgt:[0,0,0,0,0],     rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:1,vgt:0,rterr:0,ledger:0,vault:0}},
-  {name:'Robert Doyle',       rt:[0,3,0,0,0],   vgt:[0,0,0,0,0],     rterr:[0,1,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:3,vgt:0,rterr:1,ledger:0,vault:0}},
-  {name:'Roberto Irizarry',   rt:[11,12,0,0,0],  vgt:[5,0,0,0,0],     rterr:[0,0,0,0,0], ledger:[0,1,0,0,0], vault:[0,0,0,0,0], mtd:{rt:12,vgt:5,rterr:0,ledger:1,vault:0}},
-  {name:'Ryan Kelly',         rt:[0,1,0,0,0],   vgt:[0,0,0,0,0],     rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:1,vgt:0,rterr:0,ledger:0,vault:0}},
-  {name:'Steve Frey',         rt:[15,21,0,0,0],  vgt:[88,109,0,0,0],    rterr:[0,1,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:28,vgt:151,rterr:1,ledger:0,vault:0}},
-  {name:'Tommy Deshazer',     rt:[1,3,0,0,0],   vgt:[0,0,0,0,0],     rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:4,vgt:0,rterr:0,ledger:0,vault:0}},
-  {name:'Troy Hancock',       rt:[18,42,0,0,0],  vgt:[107,244,0,0,0],   rterr:[0,0,0,0,0], ledger:[2,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:42,vgt:244,rterr:0,ledger:0,vault:0}},
+  {name:'Alex Martinez', rt:[1,0,2,0,0], vgt:[0,0,0,0,0], rterr:[0,0,0,0,0], ledger:[0,1,0,0,0], vault:[0,0,0,0,0], mtd:{rt:3,vgt:0,rterr:0,ledger:1,vault:0}},
+  {name:'Andres Duenas', rt:[2,0,2,0,0], vgt:[0,0,0,0,0], rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:4,vgt:0,rterr:0,ledger:0,vault:0}},
+  {name:'Andrew Hidenburg', rt:[0,0,0,0,0], vgt:[0,0,0,0,0], rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:0,vgt:0,rterr:0,ledger:0,vault:0}},
+  {name:'Andrew Rominger', rt:[0,0,0,0,0], vgt:[0,0,0,0,0], rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:0,vgt:0,rterr:0,ledger:0,vault:0}},
+  {name:'Brandon York', rt:[2,0,4,0,0], vgt:[0,0,0,0,0], rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:5,vgt:0,rterr:0,ledger:0,vault:0}},
+  {name:'Brent Hendricks', rt:[0,0,0,0,0], vgt:[271,287,263,0,0], rterr:[0,0,0,0,0], ledger:[3,1,1,0,0], vault:[0,0,0,0,0], mtd:{rt:0,vgt:757,rterr:0,ledger:5,vault:0}},
+  {name:'Cesar Resendiz', rt:[13,6,1,0,0], vgt:[22,0,0,0,0], rterr:[0,0,0,0,0], ledger:[2,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:20,vgt:22,rterr:0,ledger:2,vault:0}},
+  {name:'Craig Mueller', rt:[3,0,10,0,0], vgt:[17,6,42,0,0], rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:13,vgt:65,rterr:0,ledger:0,vault:0}},
+  {name:'Damon Dziekan', rt:[0,0,0,0,0], vgt:[0,0,0,0,0], rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:0,vgt:0,rterr:0,ledger:0,vault:0}},
+  {name:'Daniel Falkenberg', rt:[0,38,16,0,0], vgt:[0,0,14,0,0], rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[1,0,0,0,0], mtd:{rt:54,vgt:14,rterr:0,ledger:0,vault:0}},
+  {name:'Daron Murphy', rt:[37,22,33,0,0], vgt:[227,138,209,0,0], rterr:[0,0,0,0,0], ledger:[1,0,2,0,0], vault:[0,0,0,0,0], mtd:{rt:79,vgt:574,rterr:0,ledger:3,vault:0}},
+  {name:'Dennis Murray', rt:[4,1,0,0,0], vgt:[4,0,0,0,0], rterr:[0,0,0,0,0], ledger:[0,1,0,0,0], vault:[0,0,0,0,0], mtd:{rt:5,vgt:4,rterr:0,ledger:1,vault:0}},
+  {name:'Earl Baker', rt:[0,0,0,0,0], vgt:[0,0,0,0,0], rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:0,vgt:0,rterr:0,ledger:0,vault:0}},
+  {name:'Ernest Stone', rt:[37,16,31,0,0], vgt:[218,92,168,0,0], rterr:[0,0,0,0,0], ledger:[1,1,0,0,0], vault:[0,0,0,0,0], mtd:{rt:76,vgt:432,rterr:0,ledger:2,vault:0}},
+  {name:'Gerardo Calenda', rt:[10,6,6,0,0], vgt:[0,0,0,0,0], rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:21,vgt:0,rterr:0,ledger:0,vault:0}},
+  {name:'Ian Sullivan', rt:[0,8,0,0,0], vgt:[0,65,0,0,0], rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:8,vgt:65,rterr:0,ledger:0,vault:0}},
+  {name:'Jacob Irizarry', rt:[39,17,0,0,0], vgt:[186,173,319,0,0], rterr:[0,0,0,0,0], ledger:[1,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:54,vgt:667,rterr:0,ledger:1,vault:0}},
+  {name:'Jakub Kmiecik', rt:[17,19,19,0,0], vgt:[24,76,30,0,0], rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:51,vgt:106,rterr:0,ledger:0,vault:0}},
+  {name:'Jason Lane', rt:[18,21,23,0,0], vgt:[69,112,128,0,0], rterr:[0,0,0,0,0], ledger:[0,1,1,0,0], vault:[0,0,0,0,0], mtd:{rt:54,vgt:267,rterr:0,ledger:2,vault:0}},
+  {name:'Jim Emberton', rt:[1,0,4,0,0], vgt:[0,0,0,0,0], rterr:[0,0,0,0,0], ledger:[0,0,1,0,0], vault:[0,0,0,0,0], mtd:{rt:5,vgt:0,rterr:0,ledger:1,vault:0}},
+  {name:'Jimmy Girardi', rt:[0,0,0,0,0], vgt:[1,8,8,0,0], rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:0,vgt:16,rterr:0,ledger:0,vault:0}},
+  {name:'Joel Argueta', rt:[3,3,1,0,0], vgt:[27,10,2,0,0], rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:4,vgt:19,rterr:0,ledger:0,vault:0}},
+  {name:'John Broderick', rt:[0,0,1,0,0], vgt:[81,7,4,0,0], rterr:[0,0,0,0,0], ledger:[1,0,1,0,0], vault:[0,0,0,0,0], mtd:{rt:1,vgt:90,rterr:0,ledger:2,vault:0}},
+  {name:'John Dubick', rt:[2,1,0,0,0], vgt:[0,0,0,0,0], rterr:[0,0,0,0,0], ledger:[1,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:1,vgt:0,rterr:0,ledger:0,vault:0}},
+  {name:'Jonathan Cruz', rt:[7,11,4,0,0], vgt:[0,0,0,0,0], rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:21,vgt:0,rterr:0,ledger:0,vault:0}},
+  {name:'Joshua Burton', rt:[7,3,2,0,0], vgt:[4,13,26,0,0], rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:11,vgt:43,rterr:0,ledger:0,vault:0}},
+  {name:'Juan Payan', rt:[14,0,34,0,0], vgt:[0,0,123,0,0], rterr:[0,0,0,0,0], ledger:[0,0,6,0,0], vault:[0,0,0,0,0], mtd:{rt:34,vgt:123,rterr:0,ledger:6,vault:0}},
+  {name:'Kurt Grunden', rt:[6,6,3,0,0], vgt:[18,25,16,0,0], rterr:[1,0,0,0,0], ledger:[0,1,0,0,0], vault:[0,0,0,0,0], mtd:{rt:15,vgt:59,rterr:1,ledger:1,vault:0}},
+  {name:'Liam Mulchrone', rt:[29,14,29,0,0], vgt:[153,231,171,0,0], rterr:[1,0,2,0,0], ledger:[1,3,0,0,0], vault:[0,0,0,0,0], mtd:{rt:72,vgt:402,rterr:3,ledger:4,vault:0}},
+  {name:'Luke Hughes', rt:[0,0,5,0,0], vgt:[0,0,29,0,0], rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:5,vgt:29,rterr:0,ledger:0,vault:0}},
+  {name:'Manuel Vargas', rt:[38,49,52,0,0], vgt:[87,78,0,0,0], rterr:[0,0,0,0,0], ledger:[1,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:128,vgt:89,rterr:0,ledger:0,vault:0}},
+  {name:'Mark Minnis', rt:[8,4,0,0,0], vgt:[35,5,0,0,0], rterr:[0,0,0,0,0], ledger:[0,1,0,0,0], vault:[0,0,0,0,0], mtd:{rt:12,vgt:39,rterr:0,ledger:1,vault:0}},
+  {name:'Mathew Moreland', rt:[0,1,0,0,0], vgt:[3,7,9,0,0], rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:1,vgt:19,rterr:0,ledger:0,vault:0}},
+  {name:'Michael Binstein', rt:[12,3,2,0,0], vgt:[0,0,0,0,0], rterr:[0,0,0,0,0], ledger:[1,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:17,vgt:0,rterr:0,ledger:1,vault:0}},
+  {name:'Nathaniel Knudtson', rt:[0,0,0,0,0], vgt:[0,2,3,0,0], rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:0,vgt:5,rterr:0,ledger:0,vault:0}},
+  {name:'Naveen Bobba', rt:[8,12,9,0,0], vgt:[0,0,0,0,0], rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:25,vgt:0,rterr:0,ledger:0,vault:0}},
+  {name:'Randy Morlan', rt:[0,0,1,0,0], vgt:[0,0,0,0,0], rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:1,vgt:0,rterr:0,ledger:0,vault:0}},
+  {name:'Richard Berrios', rt:[2,0,0,0,0], vgt:[0,0,0,0,0], rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:1,vgt:0,rterr:0,ledger:0,vault:0}},
+  {name:'Robert Doyle', rt:[0,3,0,0,0], vgt:[0,0,0,0,0], rterr:[0,1,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:3,vgt:0,rterr:1,ledger:0,vault:0}},
+  {name:'Roberto Irizarry', rt:[11,12,14,0,0], vgt:[5,0,1,0,0], rterr:[0,0,0,0,0], ledger:[0,1,0,0,0], vault:[0,0,0,0,0], mtd:{rt:26,vgt:6,rterr:0,ledger:1,vault:0}},
+  {name:'Ryan Kelly', rt:[0,1,0,0,0], vgt:[0,0,0,0,0], rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:1,vgt:0,rterr:0,ledger:0,vault:0}},
+  {name:'Steve Frey', rt:[15,21,0,0,0], vgt:[88,109,0,0,0], rterr:[0,1,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:28,vgt:151,rterr:1,ledger:0,vault:0}},
+  {name:'Tommy Deshazer', rt:[1,3,5,0,0], vgt:[0,0,0,0,0], rterr:[0,0,0,0,0], ledger:[0,0,0,0,0], vault:[0,0,0,0,0], mtd:{rt:9,vgt:0,rterr:0,ledger:0,vault:0}},
+  {name:'Troy Hancock', rt:[18,42,36,0,0], vgt:[107,244,193,0,0], rterr:[0,0,0,0,0], ledger:[2,0,1,0,0], vault:[0,0,1,0,0], mtd:{rt:78,vgt:437,rterr:0,ledger:1,vault:1}}
 ];
 
 function renderCollector(p) {
@@ -341,12 +341,13 @@ function renderCollector(p) {
 
 // ════════ VAULT ════════
 const VAULT_SEED = [
-  {name:'Brian Treptow',  wk:[{balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0},{balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0},null,null], mtd:{offages:1,amount:-17.91,balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0}},
-  {name:'Ana Martinez',   wk:[{balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0},{balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0},null,null], mtd:{offages:0,amount:0,balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0}},
-  {name:'Chris Pope',     wk:[{balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0},{balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0},null,null], mtd:{offages:0,amount:0,balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0}},
-  {name:"Rory O'Neill",   wk:[{balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0},null,null,null],                                                            mtd:{offages:0,amount:0,balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0}},
-  {name:'Randy Morlan',   wk:[{balanced:1,outstanding:1,controllable:1,ledger:0,vbs:0,phys:0},{balanced:1,outstanding:1,controllable:0,ledger:0,vbs:0,phys:0},null,null], mtd:{offages:2,amount:-8467,balanced:1,outstanding:2,controllable:2,ledger:0,vbs:0,phys:0}},
-  {name:'Joel Argueta',   wk:[null,null,null,null],                                                                                                                        mtd:{offages:1,amount:-134,balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0}}
+  {name:'Brian Treptow', wk:[{balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0},{balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0},{balanced:1,outstanding:3,controllable:0,ledger:0,vbs:0,phys:0},null], mtd:{offages:5,amount:-7676.67,balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0}},
+  {name:'Ana Martinez', wk:[{balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0},{balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0},{balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0},null], mtd:{offages:0,amount:0,balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0}},
+  {name:'Chris Pope', wk:[{balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0},{balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0},{balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0},null], mtd:{offages:1,amount:-5122.1,balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0}},
+  {name:"Rory O'Neill", wk:[{balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0},null,null,null], mtd:{offages:0,amount:0,balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0}},
+  {name:'Randy Morlan', wk:[{balanced:1,outstanding:1,controllable:1,ledger:0,vbs:0,phys:0},{balanced:1,outstanding:1,controllable:0,ledger:0,vbs:0,phys:0},{balanced:1,outstanding:0,controllable:1,ledger:0,vbs:0,phys:0},null], mtd:{offages:0,amount:0,balanced:1,outstanding:2,controllable:2,ledger:0,vbs:0,phys:0}},
+  {name:'Joel Argueta', wk:[null,null,null,null], mtd:{offages:0,amount:0,balanced:1,outstanding:0,controllable:1,ledger:0,vbs:0,phys:0}},
+  {name:'Trichelle Thomas', wk:[null,null,null,null], mtd:{offages:1,amount:-3034,balanced:1,outstanding:0,controllable:0,ledger:0,vbs:0,phys:0}}
 ];
 
 function balancedCell(v) {
@@ -457,50 +458,51 @@ function renderVault(p) {
 
 // ════════ TECHNICIAN ════════
 const TECH_SEED = [
-  {name:'Alex Martinez',w1:{pmd:null,maint:4,tickets:24,unacceptable:5,pardoned:3,util:0.955},w2:{pmd:null,maint:3,tickets:11,unacceptable:3,pardoned:null,util:0.9616},mtd:{pmd:null,maint:5,tickets:29,unacceptable:8,pardoned:2,util:0.9546}},
-  {name:'Allen Lashbrook',w1:{pmd:null,maint:1,tickets:10,unacceptable:2,pardoned:null,util:0.688},w2:{pmd:null,maint:null,tickets:14,unacceptable:2,pardoned:null,util:0.6923},mtd:{pmd:null,maint:1,tickets:23,unacceptable:4,pardoned:null,util:0.7069}},
-  {name:'Andy Duenas',w1:{pmd:null,maint:null,tickets:6,unacceptable:null,pardoned:null,util:0.945},w2:{pmd:null,maint:15,tickets:3,unacceptable:null,pardoned:null,util:0.9987},mtd:{pmd:null,maint:15,tickets:9,unacceptable:null,pardoned:null,util:0.9786}},
-  {name:'Brandon York',w1:{pmd:null,maint:null,tickets:14,unacceptable:6,pardoned:null,util:0.993},w2:{pmd:null,maint:1,tickets:15,unacceptable:5,pardoned:1,util:0.9791},mtd:{pmd:null,maint:1,tickets:27,unacceptable:11,pardoned:1,util:0.9843}},
-  {name:'Cesar Resendiz',w1:{pmd:null,maint:1,tickets:4,unacceptable:2,pardoned:null,util:0.83},w2:{pmd:null,maint:null,tickets:6,unacceptable:2,pardoned:1,util:0.8781},mtd:{pmd:null,maint:1,tickets:10,unacceptable:4,pardoned:1,util:0.8176}},
-  {name:'Chris Pope',w1:null,w2:{pmd:null,maint:null,tickets:null,unacceptable:null,pardoned:null,util:0},mtd:{pmd:null,maint:null,tickets:null,unacceptable:null,pardoned:null,util:0}},
-  {name:'Craig Mueller',w1:{pmd:null,maint:null,tickets:1,unacceptable:null,pardoned:null,util:null},w2:{pmd:null,maint:null,tickets:1,unacceptable:1,pardoned:null,util:null},mtd:{pmd:null,maint:null,tickets:1,unacceptable:1,pardoned:null,util:null}},
-  {name:'Dennis Murray',w1:{pmd:null,maint:null,tickets:14,unacceptable:7,pardoned:2,util:0.548},w2:{pmd:12,maint:null,tickets:9,unacceptable:1,pardoned:null,util:0.3701},mtd:{pmd:12,maint:null,tickets:23,unacceptable:8,pardoned:2,util:0.4586}},
-  {name:'Gerardo Calenda',w1:{pmd:null,maint:null,tickets:18,unacceptable:5,pardoned:null,util:0.416},w2:{pmd:null,maint:null,tickets:14,unacceptable:4,pardoned:null,util:0.1871},mtd:{pmd:null,maint:null,tickets:24,unacceptable:7,pardoned:null,util:0.2885}},
-  {name:'Ian Sullivan',w1:{pmd:null,maint:null,tickets:1,unacceptable:null,pardoned:null,util:0.248},w2:{pmd:null,maint:null,tickets:1,unacceptable:1,pardoned:null,util:0.2008},mtd:{pmd:null,maint:null,tickets:2,unacceptable:1,pardoned:null,util:0.1795}},
-  {name:'Jacob Bogen',w1:{pmd:null,maint:null,tickets:7,unacceptable:1,pardoned:null,util:0.428},w2:{pmd:8,maint:null,tickets:1,unacceptable:null,pardoned:null,util:0.3319},mtd:{pmd:8,maint:null,tickets:8,unacceptable:1,pardoned:null,util:0.451}},
-  {name:'Jason Lane',w1:{pmd:null,maint:null,tickets:13,unacceptable:2,pardoned:null,util:0.149},w2:{pmd:null,maint:null,tickets:5,unacceptable:null,pardoned:null,util:0.0623},mtd:{pmd:null,maint:null,tickets:12,unacceptable:2,pardoned:null,util:0.0978}},
-  {name:'Jim Emberton',w1:{pmd:null,maint:null,tickets:10,unacceptable:6,pardoned:1,util:0.355},w2:{pmd:null,maint:null,tickets:15,unacceptable:10,pardoned:3,util:0.4425},mtd:{pmd:null,maint:null,tickets:24,unacceptable:15,pardoned:4,util:0.3511}},
-  {name:'Jimmy Cruz',w1:null,w2:{pmd:null,maint:1,tickets:null,unacceptable:null,pardoned:null,util:null},mtd:{pmd:null,maint:1,tickets:null,unacceptable:null,pardoned:null,util:null}},
-  {name:'Jimmy Girardi',w1:{pmd:null,maint:null,tickets:null,unacceptable:null,pardoned:null,util:0.0005},w2:{pmd:null,maint:3,tickets:3,unacceptable:1,pardoned:1,util:0.1281},mtd:{pmd:null,maint:3,tickets:3,unacceptable:1,pardoned:1,util:0.0811}},
-  {name:'Joanna Guzman',w1:null,w2:{pmd:null,maint:null,tickets:3,unacceptable:null,pardoned:null,util:null},mtd:{pmd:null,maint:null,tickets:3,unacceptable:null,pardoned:null,util:null}},
-  {name:'Joel Argueta',w1:{pmd:null,maint:null,tickets:2,unacceptable:1,pardoned:null,util:0.262},w2:{pmd:null,maint:null,tickets:4,unacceptable:null,pardoned:null,util:0.2829},mtd:{pmd:null,maint:null,tickets:5,unacceptable:1,pardoned:null,util:0.2789}},
-  {name:'John Dubick',w1:{pmd:16,maint:3,tickets:13,unacceptable:3,pardoned:null,util:0.715},w2:{pmd:14,maint:1,tickets:10,unacceptable:1,pardoned:null,util:0.8482},mtd:{pmd:30,maint:3,tickets:20,unacceptable:4,pardoned:null,util:0.8667}},
-  {name:'Jonathan Cruz',w1:{pmd:null,maint:null,tickets:14,unacceptable:6,pardoned:1,util:0.434},w2:{pmd:null,maint:null,tickets:8,unacceptable:3,pardoned:1,util:0.3539},mtd:{pmd:null,maint:null,tickets:17,unacceptable:7,pardoned:2,util:0.389}},
-  {name:'Joshua Burton',w1:{pmd:null,maint:null,tickets:8,unacceptable:null,pardoned:null,util:0.325},w2:{pmd:null,maint:null,tickets:8,unacceptable:2,pardoned:null,util:0.2885},mtd:{pmd:null,maint:null,tickets:14,unacceptable:2,pardoned:null,util:0.256}},
-  {name:'Kurt Grunden',w1:{pmd:null,maint:null,tickets:7,unacceptable:null,pardoned:null,util:0.271},w2:{pmd:null,maint:null,tickets:7,unacceptable:null,pardoned:null,util:0.1951},mtd:{pmd:null,maint:null,tickets:14,unacceptable:null,pardoned:null,util:0.2343}},
-  {name:'Luke Hughes',w1:{pmd:null,maint:null,tickets:null,unacceptable:null,pardoned:null,util:0.98},w2:null,mtd:null},
-  {name:'Mark Minnis',w1:{pmd:null,maint:null,tickets:3,unacceptable:null,pardoned:null,util:null},w2:{pmd:null,maint:2,tickets:null,unacceptable:null,pardoned:null,util:null},mtd:{pmd:null,maint:2,tickets:null,unacceptable:null,pardoned:null,util:null}},
-  {name:'Mathew Moreland',w1:{pmd:null,maint:null,tickets:null,unacceptable:null,pardoned:null,util:0.092},w2:{pmd:null,maint:null,tickets:2,unacceptable:null,pardoned:null,util:0.2768},mtd:{pmd:null,maint:null,tickets:2,unacceptable:null,pardoned:null,util:0.2193}},
-  {name:'Michael Binstein',w1:{pmd:4,maint:11,tickets:6,unacceptable:null,pardoned:null,util:0.978},w2:{pmd:17,maint:9,tickets:1,unacceptable:null,pardoned:null,util:0.9171},mtd:{pmd:21,maint:20,tickets:7,unacceptable:null,pardoned:null,util:0.9489}},
-  {name:'Naveen Bobba',w1:{pmd:null,maint:null,tickets:14,unacceptable:3,pardoned:1,util:0.809},w2:{pmd:null,maint:1,tickets:19,unacceptable:9,pardoned:1,util:0.732},mtd:{pmd:null,maint:1,tickets:29,unacceptable:11,pardoned:2,util:0.753}},
-  {name:'Randy Morlan',w1:{pmd:null,maint:null,tickets:1,unacceptable:1,pardoned:null,util:null},w2:null,mtd:{pmd:null,maint:null,tickets:1,unacceptable:1,pardoned:null,util:null}},
-  {name:'Richard Berrios',w1:{pmd:34,maint:2,tickets:26,unacceptable:6,pardoned:2,util:0.907},w2:{pmd:25,maint:5,tickets:13,unacceptable:6,pardoned:1,util:0.886},mtd:{pmd:57,maint:5,tickets:25,unacceptable:8,pardoned:2,util:0.8938}},
-  {name:'Robert Doyle',w1:{pmd:null,maint:null,tickets:6,unacceptable:3,pardoned:null,util:0.979},w2:{pmd:null,maint:null,tickets:6,unacceptable:1,pardoned:null,util:0.8841},mtd:{pmd:null,maint:null,tickets:8,unacceptable:2,pardoned:null,util:0.9186}},
-  {name:'Ryan Kelly',w1:{pmd:null,maint:null,tickets:3,unacceptable:1,pardoned:null,util:0.996},w2:{pmd:null,maint:null,tickets:2,unacceptable:2,pardoned:null,util:0.929},mtd:{pmd:null,maint:null,tickets:5,unacceptable:3,pardoned:null,util:0.9572}},
-  {name:'Steve Thomas',w1:{pmd:null,maint:null,tickets:10,unacceptable:null,pardoned:null,util:0.997},w2:{pmd:null,maint:null,tickets:10,unacceptable:1,pardoned:null,util:0.9966},mtd:{pmd:null,maint:null,tickets:19,unacceptable:1,pardoned:null,util:0.997}},
-  {name:'Steven Frey',w1:{pmd:null,maint:null,tickets:5,unacceptable:2,pardoned:null,util:0.3827},w2:{pmd:null,maint:null,tickets:2,unacceptable:null,pardoned:null,util:0.5411},mtd:{pmd:null,maint:null,tickets:5,unacceptable:1,pardoned:null,util:0.6683}},
-  {name:'Tommy Deshazer',w1:{pmd:null,maint:null,tickets:14,unacceptable:3,pardoned:null,util:0.605},w2:{pmd:null,maint:1,tickets:13,unacceptable:2,pardoned:1,util:0.5184},mtd:{pmd:null,maint:1,tickets:26,unacceptable:5,pardoned:1,util:0.5407}},
-  {name:'Trey Shartzer',w1:null,w2:{pmd:null,maint:null,tickets:null,unacceptable:null,pardoned:null,util:0},mtd:{pmd:null,maint:null,tickets:null,unacceptable:null,pardoned:null,util:0}},
-  {name:'Zyan Kolesar',w1:null,w2:{pmd:null,maint:null,tickets:null,unacceptable:null,pardoned:null,util:0.4176},mtd:{pmd:null,maint:null,tickets:null,unacceptable:null,pardoned:null,util:0.4176}}
+  {name:'Alex Martinez',w1:{pmd:null,maint:4,tickets:24,unacceptable:5,pardoned:3,util:0.955},w2:{pmd:null,maint:3,tickets:11,unacceptable:3,pardoned:null,util:0.9616},w3:{pmd:null,maint:3,tickets:3,unacceptable:null,pardoned:null,util:0.83},mtd:{pmd:null,maint:8,tickets:32,unacceptable:5,pardoned:5,util:0.93}},
+  {name:'Allen Lashbrook',w1:{pmd:null,maint:1,tickets:10,unacceptable:2,pardoned:null,util:0.688},w2:{pmd:null,maint:null,tickets:14,unacceptable:2,pardoned:null,util:0.6923},w3:{pmd:null,maint:1,tickets:15,unacceptable:2,pardoned:null,util:0.85},mtd:{pmd:null,maint:2,tickets:38,unacceptable:5,pardoned:1,util:0.76}},
+  {name:'Andy Duenas',w1:{pmd:null,maint:null,tickets:6,unacceptable:null,pardoned:null,util:0.945},w2:{pmd:null,maint:15,tickets:3,unacceptable:null,pardoned:null,util:0.9987},w3:{pmd:null,maint:2,tickets:7,unacceptable:null,pardoned:null,util:1},mtd:{pmd:null,maint:17,tickets:16,unacceptable:null,pardoned:null,util:0.98}},
+  {name:'Brandon York',w1:{pmd:null,maint:null,tickets:14,unacceptable:6,pardoned:null,util:0.993},w2:{pmd:null,maint:1,tickets:15,unacceptable:5,pardoned:1,util:0.9791},w3:{pmd:null,maint:null,tickets:8,unacceptable:null,pardoned:1,util:0.99},mtd:{pmd:null,maint:1,tickets:35,unacceptable:11,pardoned:2,util:0.99}},
+  {name:'Cesar Resendiz',w1:{pmd:null,maint:1,tickets:4,unacceptable:2,pardoned:null,util:0.83},w2:{pmd:null,maint:null,tickets:6,unacceptable:2,pardoned:1,util:0.8781},w3:{pmd:null,maint:null,tickets:1,unacceptable:1,pardoned:null,util:null},mtd:{pmd:null,maint:1,tickets:11,unacceptable:5,pardoned:1,util:0.83}},
+  {name:'Chris Pope',w1:null,w2:{pmd:null,maint:null,tickets:null,unacceptable:null,pardoned:null,util:0},w3:{pmd:null,maint:null,tickets:null,unacceptable:null,pardoned:null,util:0.0},mtd:{pmd:null,maint:null,tickets:null,unacceptable:null,pardoned:null,util:0.0}},
+  {name:'Craig Mueller',w1:{pmd:null,maint:null,tickets:1,unacceptable:null,pardoned:null,util:null},w2:{pmd:null,maint:null,tickets:1,unacceptable:1,pardoned:null,util:null},w3:null,mtd:{pmd:null,maint:null,tickets:1,unacceptable:1,pardoned:null,util:null}},
+  {name:'Dennis Murray',w1:{pmd:null,maint:null,tickets:14,unacceptable:7,pardoned:2,util:0.548},w2:{pmd:12,maint:null,tickets:9,unacceptable:1,pardoned:null,util:0.3701},w3:{pmd:null,maint:null,tickets:7,unacceptable:1,pardoned:2,util:0.47},mtd:{pmd:12,maint:null,tickets:30,unacceptable:7,pardoned:6,util:0.46}},
+  {name:'Gerardo Calenda',w1:{pmd:null,maint:null,tickets:18,unacceptable:5,pardoned:null,util:0.416},w2:{pmd:null,maint:null,tickets:14,unacceptable:4,pardoned:null,util:0.1871},w3:{pmd:null,maint:1,tickets:8,unacceptable:3,pardoned:null,util:0.15},mtd:{pmd:null,maint:1,tickets:32,unacceptable:8,pardoned:2,util:0.24}},
+  {name:'Ian Sullivan',w1:{pmd:null,maint:null,tickets:1,unacceptable:null,pardoned:null,util:0.248},w2:{pmd:null,maint:null,tickets:1,unacceptable:1,pardoned:null,util:0.2008},w3:{pmd:null,maint:null,tickets:4,unacceptable:null,pardoned:null,util:0.09},mtd:{pmd:null,maint:null,tickets:6,unacceptable:null,pardoned:1,util:0.14}},
+  {name:'Jacob Bogen',w1:{pmd:null,maint:null,tickets:7,unacceptable:1,pardoned:null,util:0.428},w2:{pmd:8,maint:null,tickets:1,unacceptable:null,pardoned:null,util:0.3319},w3:{pmd:1,maint:1,tickets:4,unacceptable:null,pardoned:null,util:0.91},mtd:{pmd:8,maint:1,tickets:12,unacceptable:null,pardoned:1,util:0.63}},
+  {name:'Jason Lane',w1:{pmd:null,maint:null,tickets:13,unacceptable:2,pardoned:null,util:0.149},w2:{pmd:null,maint:null,tickets:5,unacceptable:null,pardoned:null,util:0.0623},w3:{pmd:null,maint:null,tickets:6,unacceptable:2,pardoned:1,util:0.05},mtd:{pmd:null,maint:null,tickets:18,unacceptable:2,pardoned:3,util:0.08}},
+  {name:'Jim Emberton',w1:{pmd:null,maint:null,tickets:10,unacceptable:6,pardoned:1,util:0.355},w2:{pmd:null,maint:null,tickets:15,unacceptable:10,pardoned:3,util:0.4425},w3:{pmd:null,maint:null,tickets:17,unacceptable:9,pardoned:null,util:0.35},mtd:{pmd:null,maint:null,tickets:41,unacceptable:24,pardoned:4,util:0.36}},
+  {name:'Jimmy Cruz',w1:null,w2:{pmd:null,maint:1,tickets:null,unacceptable:null,pardoned:null,util:null},w3:null,mtd:{pmd:null,maint:1,tickets:null,unacceptable:null,pardoned:null,util:null}},
+  {name:'Jimmy Girardi',w1:{pmd:null,maint:null,tickets:null,unacceptable:null,pardoned:null,util:0.0005},w2:{pmd:null,maint:3,tickets:3,unacceptable:1,pardoned:1,util:0.1281},w3:{pmd:null,maint:null,tickets:null,unacceptable:null,pardoned:null,util:0.28},mtd:{pmd:null,maint:3,tickets:3,unacceptable:1,pardoned:1,util:0.16}},
+  {name:'Joanna Guzman',w1:null,w2:{pmd:null,maint:null,tickets:3,unacceptable:null,pardoned:null,util:null},w3:{pmd:null,maint:null,tickets:6,unacceptable:null,pardoned:null,util:null},mtd:{pmd:null,maint:null,tickets:9,unacceptable:null,pardoned:null,util:null}},
+  {name:'Joel Argueta',w1:{pmd:null,maint:null,tickets:2,unacceptable:1,pardoned:null,util:0.262},w2:{pmd:null,maint:null,tickets:4,unacceptable:null,pardoned:null,util:0.2829},w3:{pmd:null,maint:null,tickets:6,unacceptable:1,pardoned:null,util:0.39},mtd:{pmd:null,maint:null,tickets:11,unacceptable:2,pardoned:null,util:0.31}},
+  {name:'John Dubick',w1:{pmd:16,maint:3,tickets:13,unacceptable:3,pardoned:null,util:0.715},w2:{pmd:14,maint:1,tickets:10,unacceptable:1,pardoned:null,util:0.8482},w3:{pmd:14,maint:1,tickets:10,unacceptable:1,pardoned:1,util:0.8},mtd:{pmd:54,maint:4,tickets:30,unacceptable:4,pardoned:2,util:0.85}},
+  {name:'Jonathan Cruz',w1:{pmd:null,maint:null,tickets:14,unacceptable:6,pardoned:1,util:0.434},w2:{pmd:null,maint:null,tickets:8,unacceptable:3,pardoned:1,util:0.3539},w3:{pmd:null,maint:1,tickets:13,unacceptable:5,pardoned:null,util:0.45},mtd:{pmd:null,maint:1,tickets:30,unacceptable:12,pardoned:2,util:0.42}},
+  {name:'Joshua Burton',w1:{pmd:null,maint:null,tickets:8,unacceptable:null,pardoned:null,util:0.325},w2:{pmd:null,maint:null,tickets:8,unacceptable:2,pardoned:null,util:0.2885},w3:{pmd:null,maint:null,tickets:10,unacceptable:1,pardoned:null,util:0.45},mtd:{pmd:null,maint:null,tickets:24,unacceptable:3,pardoned:null,util:0.33}},
+  {name:'Kurt Grunden',w1:{pmd:null,maint:null,tickets:7,unacceptable:null,pardoned:null,util:0.271},w2:{pmd:null,maint:null,tickets:7,unacceptable:null,pardoned:null,util:0.1951},w3:{pmd:null,maint:null,tickets:10,unacceptable:null,pardoned:null,util:0.15},mtd:{pmd:null,maint:null,tickets:24,unacceptable:null,pardoned:null,util:0.21}},
+  {name:'Luke Hughes',w1:{pmd:null,maint:null,tickets:null,unacceptable:null,pardoned:null,util:0.98},w2:null,w3:{pmd:null,maint:null,tickets:4,unacceptable:null,pardoned:null,util:0.84},mtd:{pmd:null,maint:null,tickets:4,unacceptable:null,pardoned:null,util:0.84}},
+  {name:'Mark Minnis',w1:{pmd:null,maint:null,tickets:3,unacceptable:null,pardoned:null,util:null},w2:{pmd:null,maint:2,tickets:null,unacceptable:null,pardoned:null,util:null},w3:null,mtd:{pmd:null,maint:2,tickets:null,unacceptable:null,pardoned:null,util:null}},
+  {name:'Mathew Moreland',w1:{pmd:null,maint:null,tickets:null,unacceptable:null,pardoned:null,util:0.092},w2:{pmd:null,maint:null,tickets:2,unacceptable:null,pardoned:null,util:0.2768},w3:{pmd:null,maint:1,tickets:null,unacceptable:null,pardoned:null,util:0.27},mtd:{pmd:null,maint:1,tickets:2,unacceptable:null,pardoned:null,util:0.24}},
+  {name:'Michael Binstein',w1:{pmd:4,maint:11,tickets:6,unacceptable:null,pardoned:null,util:0.978},w2:{pmd:17,maint:9,tickets:1,unacceptable:null,pardoned:null,util:0.9171},w3:{pmd:8,maint:13,tickets:7,unacceptable:1,pardoned:2,util:0.98},mtd:{pmd:29,maint:33,tickets:14,unacceptable:1,pardoned:2,util:0.96}},
+  {name:'Naveen Bobba',w1:{pmd:null,maint:null,tickets:14,unacceptable:3,pardoned:1,util:0.809},w2:{pmd:null,maint:1,tickets:19,unacceptable:9,pardoned:1,util:0.732},w3:{pmd:null,maint:1,tickets:14,unacceptable:null,pardoned:null,util:0.85},mtd:{pmd:null,maint:2,tickets:43,unacceptable:11,pardoned:2,util:0.79}},
+  {name:'Randy Morlan',w1:{pmd:null,maint:null,tickets:1,unacceptable:1,pardoned:null,util:null},w2:null,w3:null,mtd:{pmd:null,maint:null,tickets:1,unacceptable:1,pardoned:null,util:null}},
+  {name:'Richard Berrios',w1:{pmd:34,maint:2,tickets:26,unacceptable:6,pardoned:2,util:0.907},w2:{pmd:25,maint:5,tickets:13,unacceptable:6,pardoned:1,util:0.886},w3:{pmd:18,maint:4,tickets:16,unacceptable:3,pardoned:3,util:0.9},mtd:{pmd:74,maint:9,tickets:41,unacceptable:11,pardoned:5,util:0.9}},
+  {name:'Robert Doyle',w1:{pmd:null,maint:null,tickets:6,unacceptable:3,pardoned:null,util:0.979},w2:{pmd:null,maint:null,tickets:6,unacceptable:1,pardoned:null,util:0.8841},w3:{pmd:null,maint:1,tickets:6,unacceptable:2,pardoned:null,util:0.99},mtd:{pmd:null,maint:1,tickets:14,unacceptable:4,pardoned:null,util:0.89}},
+  {name:'Roberto Irizarry',w1:null,w2:null,w3:{pmd:null,maint:null,tickets:3,unacceptable:null,pardoned:null,util:0.0},mtd:{pmd:null,maint:null,tickets:3,unacceptable:null,pardoned:null,util:0.0}},
+  {name:'Ryan Kelly',w1:{pmd:null,maint:null,tickets:3,unacceptable:1,pardoned:null,util:0.996},w2:{pmd:null,maint:null,tickets:2,unacceptable:2,pardoned:null,util:0.929},w3:{pmd:null,maint:3,tickets:3,unacceptable:null,pardoned:null,util:0.94},mtd:{pmd:null,maint:3,tickets:8,unacceptable:1,pardoned:2,util:0.95}},
+  {name:'Steve Thomas',w1:{pmd:null,maint:null,tickets:10,unacceptable:null,pardoned:null,util:0.997},w2:{pmd:null,maint:null,tickets:10,unacceptable:1,pardoned:null,util:0.9966},w3:{pmd:null,maint:null,tickets:5,unacceptable:null,pardoned:null,util:1},mtd:{pmd:null,maint:null,tickets:24,unacceptable:1,pardoned:null,util:1}},
+  {name:'Steven Frey',w1:{pmd:null,maint:null,tickets:5,unacceptable:2,pardoned:null,util:0.3827},w2:{pmd:null,maint:null,tickets:2,unacceptable:null,pardoned:null,util:0.5411},w3:null,mtd:{pmd:null,maint:null,tickets:5,unacceptable:1,pardoned:null,util:0.67}},
+  {name:'Tommy Deshazer',w1:{pmd:null,maint:null,tickets:14,unacceptable:3,pardoned:null,util:0.605},w2:{pmd:null,maint:1,tickets:13,unacceptable:2,pardoned:1,util:0.5184},w3:{pmd:null,maint:null,tickets:10,unacceptable:2,pardoned:null,util:0.42},mtd:{pmd:null,maint:1,tickets:36,unacceptable:7,pardoned:1,util:0.5}},
+  {name:'Trey Shartzer',w1:null,w2:{pmd:null,maint:null,tickets:null,unacceptable:null,pardoned:null,util:0},w3:{pmd:null,maint:null,tickets:null,unacceptable:null,pardoned:null,util:0.0},mtd:{pmd:null,maint:null,tickets:null,unacceptable:null,pardoned:null,util:0.0}},
+  {name:'Zyan Kolesar',w1:null,w2:{pmd:null,maint:null,tickets:null,unacceptable:null,pardoned:null,util:0.4176},w3:{pmd:null,maint:null,tickets:6,unacceptable:2,pardoned:4,util:0.14},mtd:{pmd:null,maint:null,tickets:6,unacceptable:2,pardoned:4,util:0.23}}
 ];
 
 function renderTech(p) {
   updatePeriodLabel('tech',p);
   const el=document.getElementById('tech-body');
-  if(p>=2&&p<=4) { noData(el); return; }
+  if(p>=3&&p<=4) { noData(el); return; }
   const isMTD=p===5;
   const rows=TECH_SEED.map(s=>{
-    const d=isMTD?s.mtd:p===1?s.w2:s.w1;
+    const d=isMTD?s.mtd:p===2?s.w3:p===1?s.w2:s.w1;
     return {name:s.name,d};
   }).filter(r=>r.d!==null);
   rows.sort((a,b)=>{
@@ -546,11 +548,11 @@ function renderTech(p) {
 
 // ════════ PROJECT ════════
 const PROJ_SEED = [
-  {name:'Mathew Moreland',wk:[{swaps:0,repairs:2,closures:0},{swaps:2,repairs:6,closures:2},{swaps:0,repairs:0,closures:0},{swaps:0,repairs:0,closures:0}],mtd:{swaps:2,repairs:8,closures:2}},
-  {name:'Jimmy Girardi',wk:[{swaps:0,repairs:2,closures:0},{swaps:2,repairs:6,closures:0},{swaps:0,repairs:0,closures:0},{swaps:0,repairs:0,closures:0}],mtd:{swaps:2,repairs:8,closures:2}},
-  {name:'Earl Baker',wk:[{swaps:0,repairs:10,closures:0},{swaps:1,repairs:10,closures:0},{swaps:0,repairs:0,closures:0},{swaps:0,repairs:0,closures:0}],mtd:{swaps:1,repairs:20,closures:0}},
-  {name:'Nathaniel Knudtson',wk:[{swaps:0,repairs:16,closures:0},{swaps:1,repairs:15,closures:0},{swaps:0,repairs:0,closures:0},{swaps:0,repairs:0,closures:0}],mtd:{swaps:1,repairs:31,closures:0}},
-  {name:'John Broderick',wk:[{swaps:0,repairs:3,closures:0},{swaps:1,repairs:3,closures:0},{swaps:0,repairs:0,closures:0},{swaps:0,repairs:0,closures:0}],mtd:{swaps:1,repairs:6,closures:0}}
+  {name:'Mathew Moreland',wk:[{swaps:0,repairs:2,closures:0},{swaps:2,repairs:6,closures:2},{swaps:0,repairs:4,closures:0},{swaps:0,repairs:0,closures:0}],mtd:{swaps:2,repairs:12,closures:2}},
+  {name:'Jimmy Girardi',wk:[{swaps:0,repairs:2,closures:0},{swaps:2,repairs:6,closures:0},{swaps:0,repairs:2,closures:0},{swaps:0,repairs:0,closures:0}],mtd:{swaps:2,repairs:10,closures:2}},
+  {name:'Earl Baker',wk:[{swaps:0,repairs:10,closures:0},{swaps:1,repairs:10,closures:0},{swaps:5,repairs:4,closures:0},{swaps:0,repairs:0,closures:0}],mtd:{swaps:6,repairs:24,closures:0}},
+  {name:'Nathaniel Knudtson',wk:[{swaps:0,repairs:16,closures:0},{swaps:1,repairs:15,closures:0},{swaps:4,repairs:8,closures:0},{swaps:0,repairs:0,closures:0}],mtd:{swaps:5,repairs:39,closures:0}},
+  {name:'John Broderick',wk:[{swaps:0,repairs:3,closures:0},{swaps:1,repairs:3,closures:0},{swaps:4,repairs:2,closures:0},{swaps:0,repairs:0,closures:0}],mtd:{swaps:5,repairs:8,closures:0}}
 ];
 
 function renderProject(p) {
